@@ -11,7 +11,7 @@
 		3A79D6841CA882BB0096F88E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A79D6831CA882BB0096F88E /* CoreGraphics.framework */; };
 		3A79D6861CA882BB0096F88E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A79D6851CA882BB0096F88E /* UIKit.framework */; };
 		3A79D68C1CA882BB0096F88E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A79D68A1CA882BB0096F88E /* InfoPlist.strings */; };
-		3A79D68E1CA882BB0096F88E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D68D1CA882BB0096F88E /* main.m */; };
+		3A79D68E1CA882BB0096F88E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D68D1CA882BB0096F88E /* main.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A79D6921CA882BB0096F88E /* team3AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D6911CA882BB0096F88E /* team3AppDelegate.m */; };
 		3A79D6941CA882BB0096F88E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A79D6931CA882BB0096F88E /* Images.xcassets */; };
 		3A79D69B1CA882BB0096F88E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A79D69A1CA882BB0096F88E /* XCTest.framework */; };
@@ -19,7 +19,7 @@
 		3A79D69D1CA882BB0096F88E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A79D6851CA882BB0096F88E /* UIKit.framework */; };
 		3A79D6A51CA882BB0096F88E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A79D6A31CA882BB0096F88E /* InfoPlist.strings */; };
 		3A79D6A71CA882BB0096F88E /* phantomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D6A61CA882BB0096F88E /* phantomTests.m */; };
-		3A79D6B81CA897A10096F88E /* CamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D6B61CA897A10096F88E /* CamViewController.m */; };
+		3A79D6B81CA897A10096F88E /* CamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D6B61CA897A10096F88E /* CamViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A79D6B91CA897A10096F88E /* CamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A79D6B71CA897A10096F88E /* CamViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -200,6 +200,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Sheryl Zhang";
 				TargetAttributes = {
+					3A79D67D1CA882BB0096F88E = {
+						DevelopmentTeam = A863H952BX;
+					};
 					3A79D6981CA882BB0096F88E = {
 						TestTargetID = 3A79D67D1CA882BB0096F88E;
 					};
@@ -300,7 +303,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -338,7 +341,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -368,10 +371,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "phantom/phantom-Prefix.pch";
 				INFOPLIST_FILE = "phantom/phantom-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -381,10 +387,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "phantom/phantom-Prefix.pch";
 				INFOPLIST_FILE = "phantom/phantom-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -448,6 +457,7 @@
 				3A79D6AC1CA882BC0096F88E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A79D6AD1CA882BC0096F88E /* Build configuration list for PBXNativeTarget "phantomTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +466,7 @@
 				3A79D6AF1CA882BC0096F88E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
