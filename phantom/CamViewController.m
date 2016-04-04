@@ -129,7 +129,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         // Allocate buffer for output stream
         case NSStreamEventHasSpaceAvailable:
             event = @"NSStreamEventHasSpaceAvailable";
-            uint8_t buffer[64] = "ACPT";
+            //const uint8_t *hexBytes = [hexData bytes];
+            //uint8_t buffer[64] = {HexBytes[65], HexBytes[67], HexBytes[80], HexBytes[84], HexBytes[1]};
+            uint8_t buffer[64] = {0x41, 0x43, 0x50, 0x54, 0x01};
             int len;
             len = [currentStream write:buffer maxLength:sizeof(buffer)];
             if (len > 0) {
