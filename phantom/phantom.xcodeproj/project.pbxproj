@@ -21,6 +21,8 @@
 		3A79D6A71CA882BB0096F88E /* phantomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D6A61CA882BB0096F88E /* phantomTests.m */; };
 		3A79D6B81CA897A10096F88E /* CamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79D6B61CA897A10096F88E /* CamViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A79D6B91CA897A10096F88E /* CamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A79D6B71CA897A10096F88E /* CamViewController.xib */; };
+		3AAF85751CB4D6100092F01F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAF85741CB4D6100092F01F /* SystemConfiguration.framework */; };
+		3AAF85771CB4D61D0092F01F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAF85761CB4D61D0092F01F /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3A79D6B51CA897A10096F88E /* CamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamViewController.h; sourceTree = "<group>"; };
 		3A79D6B61CA897A10096F88E /* CamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamViewController.m; sourceTree = "<group>"; };
 		3A79D6B71CA897A10096F88E /* CamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CamViewController.xib; sourceTree = "<group>"; };
+		3AAF85741CB4D6100092F01F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3AAF85761CB4D61D0092F01F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AAF85771CB4D61D0092F01F /* CFNetwork.framework in Frameworks */,
+				3AAF85751CB4D6100092F01F /* SystemConfiguration.framework in Frameworks */,
 				3A79D6841CA882BB0096F88E /* CoreGraphics.framework in Frameworks */,
 				3A79D6861CA882BB0096F88E /* UIKit.framework in Frameworks */,
 				3A79D6821CA882BB0096F88E /* Foundation.framework in Frameworks */,
@@ -104,6 +110,8 @@
 		3A79D6801CA882BB0096F88E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AAF85761CB4D61D0092F01F /* CFNetwork.framework */,
+				3AAF85741CB4D6100092F01F /* SystemConfiguration.framework */,
 				3A79D6811CA882BB0096F88E /* Foundation.framework */,
 				3A79D6831CA882BB0096F88E /* CoreGraphics.framework */,
 				3A79D6851CA882BB0096F88E /* UIKit.framework */,
