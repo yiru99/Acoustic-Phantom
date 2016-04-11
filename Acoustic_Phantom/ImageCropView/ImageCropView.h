@@ -4,7 +4,6 @@
 
 #import <UIKit/UIKit.h>
 #import "FXBlurView.h"
-
 #pragma mark ControlPointView interface
 
 @interface ControlPointView : UIView {
@@ -15,16 +14,19 @@
 
 @end
 
+
 #pragma mark ShadeView interface
 
 @interface ShadeView : UIView {
     CGFloat cropBorderRed, cropBorderGreen, cropBorderBlue, cropBorderAlpha;
-    CGRect cropArea;
+    CGRect cropArea1;
+    CGRect cropArea2;
     CGFloat shadeAlpha;
 }
 
 @property (nonatomic, retain) UIColor* cropBorderColor;
-@property (nonatomic) CGRect cropArea;
+@property (nonatomic) CGRect cropArea1;
+@property (nonatomic) CGRect cropArea2;
 @property (nonatomic) CGFloat shadeAlpha;
 @property (nonatomic, strong) UIImageView *blurredImageView;
 
@@ -34,6 +36,7 @@ CGRect SquareCGRectAtCenter(CGFloat centerX, CGFloat centerY, CGFloat size);
 
 UIView* dragView;
 typedef struct {
+    
     CGPoint dragStart;
     CGPoint topLeftCenter;
     CGPoint bottomLeftCenter;
@@ -57,19 +60,25 @@ typedef struct {
     CGFloat imageScale;
     
     CGFloat controlPointSize;
-    ControlPointView* topLeftPoint;
-    ControlPointView* bottomLeftPoint;
-    ControlPointView* bottomRightPoint;
-    ControlPointView* topRightPoint;
+    ControlPointView* topLeftPoint1;
+    ControlPointView* bottomLeftPoint1;
+    ControlPointView* bottomRightPoint1;
+    ControlPointView* topRightPoint1;
+    ControlPointView* topLeftPoint2;
+    ControlPointView* bottomLeftPoint2;
+    ControlPointView* bottomRightPoint2;
+    ControlPointView* topRightPoint2;
     NSArray *PointsArray;
     UIColor* controlColor;
 
-    UIView* cropAreaView;
-    DragPoint dragPoint;
+    UIView* cropAreaView1;
+    UIView* cropAreaView2;
+    DragPoint dragPoint1;
+    DragPoint dragPoint2;
     MultiDragPoint multiDragPoint;
     
     UIView* dragViewOne;
-    UIView* dragViewTwo;
+    // UIView* dragViewTwo;
 }
 - (id)initWithFrame:(CGRect)frame blurOn:(BOOL)blurOn;
 - (void)setImage:(UIImage*)image;
@@ -95,17 +104,20 @@ typedef struct {
 @end
 
 @interface ImageCropViewController : UIViewController  <UIActionSheetDelegate > {
-    ImageCropView * cropView;
+    ImageCropView * cropView1;
+    ImageCropView * cropView2;
     UIActionSheet * actionSheet;
 }
 @property (nonatomic, weak) id<ImageCropViewControllerDelegate> delegate;
 @property (nonatomic) BOOL blurredBackground;
 @property (nonatomic, retain) UIImage* image;
-@property (nonatomic, retain) ImageCropView* cropView;
+@property (nonatomic, retain) ImageCropView* cropView1;
+@property (nonatomic, retain) ImageCropView* cropView2;
 /**
  *  the crop area in the image
  */
-@property (nonatomic) CGRect cropArea;
+@property (nonatomic) CGRect cropArea1;
+@property (nonatomic) CGRect cropArea2;
 
 - (id)initWithImage:(UIImage*)image;
 - (IBAction)cancel:(id)sender;
